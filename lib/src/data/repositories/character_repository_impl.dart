@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:mpos_global_inc_test/src/core/errors/exceptions.dart';
 import 'package:mpos_global_inc_test/src/core/errors/failure.dart';
-import 'package:mpos_global_inc_test/src/data/datasources/charater_remote_data_source.dart';
+import 'package:mpos_global_inc_test/src/data/datasources/character_remote_data_source.dart';
 import 'package:mpos_global_inc_test/src/domain/entitites/character.dart';
 import 'package:mpos_global_inc_test/src/domain/repositories/character_repository.dart';
 

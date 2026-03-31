@@ -41,6 +41,7 @@ dependencies:
   equatable: ^2.0.8
   dartz: ^0.10.1
   rxdart: ^0.28.0
+  sizer:
 
 dev_dependencies:
   flutter_test:

@@ -23,18 +23,19 @@ class CharacterModel extends Character {
           location: location,
         );
 
-  factory CharacterModel.fromJson(Map<String, dynamic> json) {
-    return CharacterModel(
-      id: json['id'],
-      name: json['name'],
-      status: json['status'],
-      species: json['species'],
-      gender: json['gender'],
-      image: json['image'],
-      origin: LocationModel.fromJson(json['origin']),
-      location: LocationModel.fromJson(json['location']),
-    );
-  }
+        
+factory CharacterModel.fromJson(Map<String, dynamic> json) {
+  return CharacterModel(
+    id: json['id'] ?? 0,
+    name: json['name'] ?? '',
+    status: json['status'] ?? '',
+    species: json['species'] ?? '',
+    gender: json['gender'] ?? '',
+    image: json['image'] ?? '',
+    origin: LocationModel.fromJson(json['origin'] ?? {}),
+    location: LocationModel.fromJson(json['location'] ?? {}),
+  );
+}
 
   Map<String, dynamic> toJson() {
     return {

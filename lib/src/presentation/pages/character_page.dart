@@ -84,8 +84,11 @@ class _CharacterPageState extends State<CharacterPage> {
                     ),
                     child: InkWell(
                        borderRadius: BorderRadius.circular(16),
-                       onTap: () {
-                          context.push('/character/${character.id}');
+                      onTap: () {
+                         context.push(
+                           '/character/${character.id}',
+                              extra: character,
+                           );
                        },
                        child: Row(
                           children: [

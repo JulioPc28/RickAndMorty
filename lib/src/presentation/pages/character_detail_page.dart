@@ -8,11 +8,13 @@ import 'package:mpos_global_inc_test/src/presentation/bloc/character_detail_bloc
 
 class CharacterDetailPage extends StatefulWidget {
   final int characterId;
+  final dynamic initialCharacter;
 
-  const CharacterDetailPage({
-    super.key,
-    required this.characterId,
-  });
+const CharacterDetailPage({
+  super.key,
+  required this.characterId,
+  this.initialCharacter,
+});
 
   @override
   State<CharacterDetailPage> createState() => _CharacterDetailPageState();
@@ -36,8 +38,17 @@ class _CharacterDetailPageState  extends State<CharacterDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocBuilder<CharacterDetailBloc,
-          CharacterDetailState>(
-        builder: (context, state) {
+          CharacterDetailState>(builder: (context, state) {
+          if ((state is CharacterDetailLoading || state is CharacterDetailInitial) 
+               && widget.initialCharacter != null) {
+                 final character = widget.initialCharacter;
+                    return CustomScrollView(
+                       slivers: [
+                         _buildSliverAppBar(character),
+                         _buildContent(character),
+                       ],
+                     );
+          }
           if (state is CharacterDetailLoading || state is CharacterDetailInitial) {
             return const Center(
               child: CircularProgressIndicator(),

@@ -1,4 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
+// ignore_for_file: use_build_context_synchronously, depend_on_referenced_packages, strict_top_level_inference, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,20 +25,15 @@ class _CharacterDetailPageState  extends State<CharacterDetailPage> {
   @override
   void initState() {
     super.initState();
-
     // Esto evita errores de context
-    Future.microtask(() {
-      context.read<CharacterDetailBloc>().add(
-         GetCharacterDetailEvent(widget.characterId),
-      );
+    Future.microtask(() {context.read<CharacterDetailBloc>().add(GetCharacterDetailEvent(widget.characterId),);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocBuilder<CharacterDetailBloc,
-          CharacterDetailState>(builder: (context, state) {
+      body: BlocBuilder<CharacterDetailBloc, CharacterDetailState> (builder: (context, state) {
           if ((state is CharacterDetailLoading || state is CharacterDetailInitial) 
                && widget.initialCharacter != null) {
                  final character = widget.initialCharacter;

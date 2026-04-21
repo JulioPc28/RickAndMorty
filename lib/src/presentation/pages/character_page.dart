@@ -1,7 +1,6 @@
-// ignore_for_file: unnecessary_string_interpolations, deprecated_member_use
+// ignore_for_file: unnecessary_string_interpolations, deprecated_member_use, depend_on_referenced_packages
 
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -84,7 +83,7 @@ class _CharacterPageState extends State<CharacterPage> {
                     ),
                     child: InkWell(
                        borderRadius: BorderRadius.circular(16),
-                      onTap: () {
+                       onTap: () {
                          context.push(
                            '/character/${character.id}',
                               extra: character,
@@ -158,6 +157,8 @@ class _CharacterPageState extends State<CharacterPage> {
       ),
     );
   }
+
+
 
 Color _getStatusColor(String status) {
   switch (status) {

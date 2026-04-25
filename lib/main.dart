@@ -1,5 +1,4 @@
 // ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mpos_global_inc_test/src/presentation/bloc/character_bloc.dart';
@@ -12,7 +11,6 @@ void main() {
   /// Se ejecuta la aplicación
   runApp(const MyApp());
 }
-
 /// Widget raíz de la aplicación
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,8 +22,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (_) => di.sl<CharacterBloc>(),
-        ),
-        // El Bloc de detalle se inyecta por ruta, no globalmente
+        ), // El Bloc de detalle se inyecta por ruta, no globalmente
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,

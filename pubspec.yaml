@@ -34,16 +34,16 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   # Íconos estilo iOS (Cupertino)
-  
-cupertino_icons: ^1.0.8
-flutter_bloc: ^9.1.1 # Manejo de estado con el patrón BLoC
-dio: ^5.9.2  # Cliente HTTP para consumir APIs (REST, middlewares, interceptors)
-go_router: ^17.1.0 # Navegación declarativa y manejo de rutas
-get_it: ^9.2.1 # Inyección de dependencias / Service Locator
-equatable: ^2.0.8  # Comparación de objetos por valor (evita boilerplate en estados)
-dartz: ^0.10.1 # Programación funcional (Either, Option, manejo de errores)
-rxdart: ^0.28.0  # Programación reactiva con Streams y operadores avanzados
-sizer:  # Adaptación de UI responsive según tamaño de pantalla
+   
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^9.1.1 # Manejo de estado con el patrón BLoC
+  dio: ^5.9.2  # Cliente HTTP para consumir APIs (REST, middlewares, interceptors)
+  go_router: ^17.1.0 # Navegación declarativa y manejo de rutas
+  get_it: ^9.2.1 # Inyección de dependencias / Service Locator
+  equatable: ^2.0.8  # Comparación de objetos por valor (evita boilerplate en estados)
+  dartz: ^0.10.1 # Programación funcional (Either, Option, manejo de errores)
+  rxdart: ^0.28.0  # Programación reactiva con Streams y operadores avanzados
+  sizer:  # Adaptación de UI responsive según tamaño de pantalla
 
 
 dev_dependencies:
